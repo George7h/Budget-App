@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '3.3.0'
 
+# devise for authentication
+gem 'devise'
+
 # Manage secrets
 gem 'dotenv-rails'
 
