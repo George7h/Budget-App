@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '3.3.0'
 
+# Manage secrets
+gem 'dotenv-rails'
+
 # Linter and formatter for Ruby
 gem 'rubocop', '>= 1.0', '< 2.0'
 
