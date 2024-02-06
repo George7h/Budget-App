@@ -5,6 +5,9 @@ ruby '3.3.0'
 # devise for authentication
 gem 'devise'
 
+# cancancan for authorization
+gem 'cancancan'
+
 # Manage secrets
 gem 'dotenv-rails'
 
