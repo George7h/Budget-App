@@ -11,6 +11,21 @@
   </head>
 
   <body>
+
+          <% if user_signed_in? %>
+          <%= link_to "Profile", edit_user_registration_path %>
+      <% end %>
+
+  
+
+      <% if user_signed_in? %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+      <% end %>
+
+  
+      <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+        
+      <% end %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
