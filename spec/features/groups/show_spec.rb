@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "groups/show", type: :feature do
+RSpec.describe 'groups/show', type: :feature do
   before(:each) do
     user = User.create!(
-      name: "Test User",
-      email: "test@example.com",
-      password: "password",
-      password_confirmation: "password",
+      name: 'Test User',
+      email: 'test@example.com',
+      password: 'password',
+      password_confirmation: 'password',
       confirmed_at: Time.now
     )
 
@@ -18,13 +18,13 @@ RSpec.describe "groups/show", type: :feature do
     expect(page).to have_content 'Signed in successfully.'
 
     @group = user.groups.create!(
-      name: "Junk Food",
-      icon: File.open(Rails.root.join("app", "assets", "images", "defaultgroupicon.png"))
+      name: 'Junk Food',
+      icon: File.open(Rails.root.join('app', 'assets', 'images', 'defaultgroupicon.png'))
     )
 
     @expenses = [
       Expense.create!(
-        name: "McDonalds",
+        name: 'McDonalds',
         amount: 50.05,
         date: Date.today,
         group: @group,
@@ -33,13 +33,13 @@ RSpec.describe "groups/show", type: :feature do
     ]
   end
 
-  it "renders group details and expenses" do
+  it 'renders group details and expenses' do
     visit group_path(@group)
 
 
-    expect(page).to have_selector(".group-details-card")
-    expect(page).to have_selector(".group-icon")
-    expect(page).to have_content("Junk Food")
+    expect(page).to have_selector('.group-details-card')
+    expect(page).to have_selector('.group-icon')
+    expect(page).to have_content('Junk Food')
     expect(page).to have_css("img[src*='defaultgroupicon.png']")
 
     @expenses.each do |expense|
@@ -48,6 +48,6 @@ RSpec.describe "groups/show", type: :feature do
       expect(page).to have_content(expense.date)
     end
 
-    expect(page).to have_content("TOTAL PAYMENT")
+    expect(page).to have_content('TOTAL PAYMENT')
   end
 end

@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Splash page', type: :feature do
   before(:each) do
-  User.delete_all
-  @user = User.create!(name: 'Tester', email: 'tester@example.com', password: 'password123',
-  password_confirmation: 'password123')
-@user.confirm
-end
+    User.delete_all
+    @user = User.create!(name: 'Tester', email: 'tester@example.com', password: 'password123',
+                         password_confirmation: 'password123')
+    @user.confirm
+  end
 
 
   it 'shows the splash page' do
