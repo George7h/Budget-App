@@ -1,0 +1,23 @@
+<%= render partial: 'shared/navbar/navbar3' %>
+<div class="transactions-page">
+<% @expenses.each do |expense| %>
+  <div class="transaction-card">
+    <% if expense.group.icon.attached? %>
+      <%= image_tag url_for(expense.group.icon), class: "group-icon" %>
+    <% else %>
+      <p>No icon available</p>
+    <% end %>
+    <div class="transaction-card-details">
+    <p><%= expense.group.name %></p>
+    <p class="dateoftransaction"><%= expense.date.strftime("%B %d %Y") %></p></div>
+    <p><strong>$<%= number_with_precision(expense.amount, precision: 2) %></strong></p>
+    
+  </div>
+<% end %>
+
+<% if @expenses.empty? %>
+  <p>No transactions yet</p>
+<% end %>
+</div>
+
+

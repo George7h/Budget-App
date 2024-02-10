@@ -1,0 +1,9 @@
+<nav class="navbar navbar-expand-lg navcolor">
+  <%= link_to root_path do %>
+    <%= image_tag "arrow_back.svg", class: "arrow-back" %>
+  <% end %>
+  <h6 id="headingcat">EDIT ACCOUNT</h6>
+  <div class="actions">
+    <%= button_tag "Update", type: 'submit', form: 'edit_user', class: 'registration-submission' %>
+  </div>
+</nav>

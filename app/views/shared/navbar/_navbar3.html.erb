@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navcolor">
+  <div class="container-fluid navcustom">
+    <div id="separate-nav">
+      <div id="separate-nav1">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <%# <span class="navbar-toggler-icon"> %>
+        <%= image_tag "menu.svg", class:"navbar-toggler-icon" %>
+      <%# </span> %>
+
+    </button>
+    <h6 id="headingcat">TRANSACTIONS</h6>
+     
+    <%= image_tag "search.svg", class:"search" %>
+</div>
+<div id="separate-nav2">
+    <h6 id="most-recent">Most recent</h6>
+</div>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="userface">
+          <%= image_tag "face.svg",class:"default_profile" %>
+          <%= current_user.name %>
+        </div>
+        <li class="nav-item navis">
+          <%= image_tag "settings.svg",id:"logo-svg" %><%= link_to "Account settings", edit_user_registration_path, class: "nav-link" %>
+        </li>
+        <hr>
+        <li class="nav-item navis">
+          <%= image_tag "category.svg" %><%= link_to "Categories", root_path, class: "nav-link" %>
+        </li>
+        <hr>    
+        <li class="nav-item navis">
+          <%= image_tag "shopping_bag.svg" %><%= link_to "List all transactions", expenses_path, class: "nav-link" %> 
+        </li>
+        <hr>
+        <li class="nav-item navis">
+          <%= image_tag "logout.svg" %><%= button_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link", id: "logout-button" %>
+        </li>
+        <hr>
+      </ul>
+    </div>
+  </div>
+  </div>
+</nav>

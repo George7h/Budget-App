@@ -1,0 +1,32 @@
+<h1>Add a new transaction</h1>
+
+<%= form_with(model: [@group, @expense], url: group_expenses_path(@group), method: :post) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :amount %>
+    <%= form.number_field :amount, step: '0.01' %>
+  </div>
+
+    <div>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :group_id, "Category" %>
+    <%= form.collection_select :group_id, current_user.groups, :id, :name, { prompt: "Select category" } %>
+  </div>
+
+
+  <%= form.submit "Save" %>
+
+  
+<% end %>
+
+
+    
+<%= link_to "Back", group_path(@group) %>
