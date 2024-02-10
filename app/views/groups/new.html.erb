@@ -1,0 +1,16 @@
+<h1>Add a new category</h1>
+
+<%= form_with(model: @group, url: groups_path, method: :post) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder:"Name" %>
+  </div>
+
+  <div>
+    <%= form.file_field :icon %>
+  </div>
+
+  <%= form.submit "Save" %>
+<% end %>
+
+<%= link_to "Back", groups_path %>

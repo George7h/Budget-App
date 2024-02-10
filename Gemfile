@@ -2,6 +2,12 @@ source 'https://rubygems.org'
 
 ruby '3.3.0'
 
+# devise for authentication
+gem 'devise'
+
+# cancancan for authorization
+gem 'cancancan'
+
 # Manage secrets
 gem 'dotenv-rails'
 
@@ -53,6 +59,10 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
+  # Letters opener for development to receive tab popup of email confirmation
+  gem 'letter_opener', '~> 1.7', '>= 1.7.1'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do

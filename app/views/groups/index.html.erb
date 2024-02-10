@@ -1,0 +1,32 @@
+<%= render partial: 'shared/navbar/navbar1' %>
+
+<div class="category-page">
+  <div class="category-container">
+  <% @groups.each do |group| %>
+    <div class="category-card">
+      <div class="category-card-details">
+      <%= link_to group_path(group) do %>
+        <% if group.icon.attached? %>
+          <%= image_tag url_for(group.icon), id: "category-icon" %>
+        <% else %>
+          <p>There is no image</p>
+        <% end %>
+      <% end %>
+      
+      <h6><%= group.name %></h6>
+      <p>$<%= number_with_precision(group.expenses.sum(:amount), precision: 2) %></p>
+      </div>
+      <div class="category-card-buttons">
+      <%= link_to "Edit", edit_group_path(group) %>
+      <%= button_to "Delete", group_path(group), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  <% end %>
+<div id="total-budget">
+  TOTAL BUDGET AVAILABLE: <strong>$<%= number_with_precision(@groups.sum { |group| group.expenses.sum(:amount) }, precision: 2) %></strong>
+</div>
+<button id="add-category">
+  <%= link_to "Add", new_group_path, id:"add" %>
+</button>
+  </div>
+</div>
