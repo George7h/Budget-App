@@ -1,9 +1,9 @@
-<h1>Add a new category</h1>
+<h1>Edit Category</h1>
 
-<%= form_with(model: @group, url: groups_path, method: :post) do |form| %>
+<%= form_with(model: @group, url: group_path(@group), method: :patch) do |form| %>
   <div>
     <%= form.label :name %>
-    <%= form.text_field :name, placeholder:"Name" %>
+    <%= form.text_field :name %>
   </div>
 
   <div>
