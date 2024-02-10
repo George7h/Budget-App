@@ -10,8 +10,6 @@ class Expense < ApplicationRecord
 
   # validates :amount, numericality: { greater_than: 0 }
 
-
-
   # I have not included the date validation because,
   # if a user wants to plan for the future month's exenses and see what they will have available in budget.
   # Then they can.
