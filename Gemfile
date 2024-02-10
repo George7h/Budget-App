@@ -61,6 +61,8 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   # Letters opener for development to receive tab popup of email confirmation
   gem 'letter_opener', '~> 1.7', '>= 1.7.1'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
