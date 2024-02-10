@@ -12,12 +12,9 @@ RSpec.feature 'New Group Creation', type: :feature do
     fill_in 'Password', with: 'password'
     click_button 'Next'
 
-
     expect(page).to have_content 'Signed in successfully.'
 
-
     visit groups_path
-
 
     expect(page).to have_content 'Group 1'
 
@@ -28,9 +25,7 @@ RSpec.feature 'New Group Creation', type: :feature do
     fill_in 'Name', with: 'edited group name'
     attach_file('group_icon', "#{Rails.root}app/assets/images/defaultgroupicon.png")
 
-
     click_button 'Save'
-
 
     expect(page).to have_current_path(groups_path)
   end

@@ -10,12 +10,10 @@ RSpec.describe 'expenses/new', type: :feature do
       confirmed_at: Time.now
     )
 
-
     @group = user.groups.create!(
       name: 'Takeouts',
       icon: File.open(Rails.root.join('app', 'assets', 'images', 'defaultgroupicon.png'))
     )
-
 
     visit new_user_session_path
     fill_in 'Email', with: 'test@example.com'
@@ -31,11 +29,9 @@ RSpec.describe 'expenses/new', type: :feature do
     fill_in 'Amount', with: 10.0
     fill_in 'Date', with: Date.today
 
-
     select 'Takeouts', from: 'Category'
 
     click_button 'Save'
-
 
     expect(page).to have_content "McDonald's"
     expect(page).to have_content '$10.00'

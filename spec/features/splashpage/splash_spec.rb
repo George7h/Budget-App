@@ -8,7 +8,6 @@ RSpec.describe 'Splash page', type: :feature do
     @user.confirm
   end
 
-
   it 'shows the splash page' do
     visit root_path
     expect(page).to have_css('img.logo_splash')

@@ -59,8 +59,6 @@ RSpec.describe 'expenses/edit', type: :feature do
 
     click_button 'Save'
 
-
-
     expect(page).to have_content('$-75.00')
     expect(page).to have_content(Date.today)
     expect(@expense.reload.name).to eq('Updated Expense')

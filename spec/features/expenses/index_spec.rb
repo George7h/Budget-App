@@ -43,8 +43,6 @@ RSpec.describe 'expenses/index', type: :feature do
     end
   end
 
-
-
   it "displays 'No transactions yet' message when there are no expenses" do
     Expense.destroy_all
 

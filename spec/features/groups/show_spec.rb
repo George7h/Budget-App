@@ -36,7 +36,6 @@ RSpec.describe 'groups/show', type: :feature do
   it 'renders group details and expenses' do
     visit group_path(@group)
 
-
     expect(page).to have_selector('.group-details-card')
     expect(page).to have_selector('.group-icon')
     expect(page).to have_content('Junk Food')
