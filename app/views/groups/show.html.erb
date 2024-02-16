@@ -19,9 +19,10 @@
     <p><strong>Name:</strong> <%= expense.name %></p>
    <%= expense.date %></p>
     <p><strong>Amount:</strong> <%= number_with_precision(expense.amount, precision: 2) %></p>
-    
-    <%= link_to "Edit", edit_group_expense_path(@group, expense) %>
-     <%= button_to "Delete", group_expense_path(@group, expense), method: :delete, data: { confirm: "Are you sure?" } %>
+    <div class="category-card-buttons">
+    <%= link_to "Edit", edit_group_expense_path(@group, expense), class:"editbtn" %>
+     <%= button_to "Delete", group_expense_path(@group, expense), class:"deletebtn", method: :delete, data: { confirm: "Are you sure?" } %>
+     </div>
   </div>
  
 <% end %>
