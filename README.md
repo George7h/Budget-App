@@ -13,7 +13,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Budget app\] ](#-budget-app-)
+- [📖 \[Bugetto\] ](#-bugetto-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -33,11 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Budget app] <a name="about-project"></a>
+# 📖 [Bugetto] <a name="about-project"></a>
 
-This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
-
-**[Budget app]** is a...
+**[Bugetto]** is a is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,9 +57,9 @@ Build models for:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+ This is the [Live Demo Link](https://www.loom.com/share/25408bcc356e4ca2bcd27782f2fd85df?sid=7b59c3c0-468b-4b37-a5ca-e4ed29ce2cab)
 
-- [Live Demo Link](https://google.com)
+ This is the link to my deployed website: [Click here](https://budgetto-dqno.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
