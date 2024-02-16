@@ -1,7 +1,8 @@
 databases:
   - name: budgetappbugetto
     databaseName: budgetappbugetto
-    user: budget_xdon_user
+    user: budget_xdons_user
+    plan: free
 
 services:
   - type: web
