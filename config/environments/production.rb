@@ -73,7 +73,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   
-  config.action_mailer.default_url_options = { host: 'budgetto-dqno.onrender.com' }
+  config.action_mailer.default_url_options = { host: 'https://budgettobudgetbpp.onrender.com' }
 
   # Use SMTP for sending emails
   config.action_mailer.delivery_method = :smtp
