@@ -14,7 +14,7 @@ RSpec.feature 'New Group Creation', type: :feature do
     expect(page).to have_content('Add a new category')
 
     fill_in 'Name', with: 'New Group'
-    attach_file('group_icon', "#{Rails.root}app/assets/images/defaultgroupicon.png")
+    attach_file('group_icon', "#{Rails.root}/app/assets/images/defaultgroupicon.png")
 
     click_button 'Save'
 

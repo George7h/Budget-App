@@ -23,7 +23,7 @@ RSpec.feature 'New Group Creation', type: :feature do
     expect(page).to have_content 'Edit Category'
 
     fill_in 'Name', with: 'edited group name'
-    attach_file('group_icon', "#{Rails.root}app/assets/images/defaultgroupicon.png")
+    attach_file('group_icon', "#{Rails.root}/app/assets/images/defaultgroupicon.png")
 
     click_button 'Save'
 
