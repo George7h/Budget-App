@@ -48,7 +48,7 @@
 ### Key Features <a name="key-features"></a>
 
 Build models for:
-- **[USERS]**
+- **[Users]**
 - **[Expenses]**
 - **[Groups]**
 
