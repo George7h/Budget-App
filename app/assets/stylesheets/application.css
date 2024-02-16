@@ -24,6 +24,10 @@ h6 {
   font-weight: bold;
 }
 
+body {
+  height: 100%;
+}
+
 p {
   font-family: 'Proxima Nova Light', sans-serif;
   font-weight: normal;
@@ -41,6 +45,14 @@ p {
 
 .search {
   color: #f5f5f5;
+}
+
+/* Styling for the notices and alerts */
+.notice-container,
+.alert-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-list {
@@ -166,11 +178,11 @@ p {
 .navbar-collapse {
   position: fixed;
   top: 0;
-  left: -250px; /* Adjust the width of the navbar */
+  left: -250px;
   height: 100%;
   width: 100%;
   transition: left 0.3s ease;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 1000;
   background: linear-gradient(to top right, #3777c2, #2b609a);
 }
 
@@ -182,6 +194,7 @@ p {
 
 .push-content {
   transition: margin-left 0.3s ease;
+  margin-bottom: 10%;
 }
 
 .pushed {
@@ -193,11 +206,10 @@ button.navbar-toggler {
   background-image: none;
 }
 
-/* Adjust the dimensions of the background image */
 img.navbar-toggler-icon {
   background-image: none;
-  width: 30px; /* Adjust the width as needed */
-  height: 20px; /* Adjust the height as needed */
+  width: 30px;
+  height: 20px;
 }
 
 .default_profile {
@@ -226,7 +238,7 @@ img.navbar-toggler-icon {
 }
 
 .navbar-toggler {
-  border: none; /* Remove borders */
+  border: none;
 }
 
 .category-card {
@@ -274,8 +286,13 @@ img.navbar-toggler-icon {
     color: white;
     width: 100%;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     border: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
   }
 
   #add {
@@ -283,7 +300,8 @@ img.navbar-toggler-icon {
     border: solid 1px;
     margin: 0.5rem;
     padding: 1rem 4rem 1rem 4rem;
-    width: 100%;
+    width: 95%;
+    position: relative;
   }
 }
 
@@ -403,6 +421,7 @@ img.navbar-toggler-icon {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  margin-bottom: auto;
 }
 
 .registration-profile {
@@ -465,14 +484,14 @@ img.navbar-toggler-icon {
 @media screen and (min-width: 750px) {
   .navbar-collapse {
     left: 0;
-    width: auto; /* Change width to auto */
-    padding-left: 0; /* Remove padding */
-    transition: none; /* Remove transition */
+    width: auto;
+    padding-left: 0;
+    transition: none;
   }
 
   .navbar-collapse.show {
     display: flex;
-    padding-left: 0; /* Remove padding */
+    padding-left: 0;
   }
 }
 
