@@ -1,6 +1,15 @@
-<h1>Add a new transaction</h1>
-
 <%= form_with(model: [@group, @expense], url: group_expenses_path(@group), method: :post) do |form| %>
+
+<nav class="navbar navbar-expand-lg navcolor">
+  <%= link_to group_path(@group) do %>
+    <%= image_tag "arrow_back.svg", class: "arrow-back" %>
+  <% end %>
+  <h4 id="headingcat">Add a new transaction</h4>
+  <div class="actions">
+    <%= form.submit "Save", class: 'registration-submission' %>
+  </div>
+</nav>
+<div class="new_expense_form">
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -21,12 +30,4 @@
     <%= form.collection_select :group_id, current_user.groups, :id, :name, { prompt: "Select category" } %>
   </div>
 
-
-  <%= form.submit "Save" %>
-
-  
 <% end %>
-
-
-    
-<%= link_to "Back", group_path(@group) %>

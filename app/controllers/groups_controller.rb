@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = current_user.groups.find(params[:id])
-    @expenses = @group.expenses.order(created_at: :desc)
+    @expenses = @group.expenses.order(date: :desc)
   end
 
   def edit

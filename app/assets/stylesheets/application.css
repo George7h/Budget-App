@@ -65,6 +65,51 @@ p {
   padding: 5px;
 }
 
+.edit_registration_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f6f8;
+  border-radius: 10px;
+  margin: 1rem;
+
+  input {
+    padding: 1rem;
+    border: 1px;
+    border-radius: 5px;
+  }
+
+  select {
+    padding: 1rem;
+    border: 1px;
+    border-radius: 5px;
+  }
+}
+
+.new_expense_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f6f8;
+  border-radius: 10px;
+  margin: 1rem;
+  align-items: center;
+
+  input {
+    padding: 1rem;
+    border: 1px;
+    border-radius: 5px;
+  }
+
+  select {
+    padding: 1rem;
+    border: 1px;
+    border-radius: 5px;
+  }
+}
+
 .hold_buttons_splash {
   display: flex;
   align-items: center;
@@ -429,4 +474,26 @@ img.navbar-toggler-icon {
     display: flex;
     padding-left: 0; /* Remove padding */
   }
+}
+
+.editbtn {
+  background-color: #3778c2;
+  color: #f5f5f5;
+  border-radius: 5px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.deletebtn {
+  background-color: #939393;
+  color: #f5f5f5;
+  border-radius: 5px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5px;
 }

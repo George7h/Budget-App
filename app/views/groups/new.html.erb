@@ -1,8 +1,17 @@
-<h1>Add a new category</h1>
+
+
 
 <%= form_with(model: @group, url: groups_path, method: :post) do |form| %>
+<nav class="navbar navbar-expand-lg navcolor">
+  <%= link_to groups_path do %>
+    <%= image_tag "arrow_back.svg", class: "arrow-back" %>
+  <% end %>
+  <h2 id="headingcat">Add a new category</h2>
+  <div class="actions">
+    <%= form.submit "Save", class: 'registration-submission' %>
+  </div>
+</nav>
   <div>
-    <%= form.label :name %>
     <%= form.text_field :name, placeholder:"Name" %>
   </div>
 
@@ -10,7 +19,5 @@
     <%= form.file_field :icon %>
   </div>
 
-  <%= form.submit "Save" %>
+ 
 <% end %>
-
-<%= link_to "Back", groups_path %>
