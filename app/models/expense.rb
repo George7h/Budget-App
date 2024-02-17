@@ -4,20 +4,7 @@ class Expense < ApplicationRecord
   validates :name, length: { maximum: 50 }
   validates :amount, numericality: true
   validates :group_id, presence: true
+  validates :amount, presence: true, numericality: { greater_than_or_equal_to: -10000000, less_than_or_equal_to: 10000000 }
 
-  # I have not included the numericality, because it I want to use expenses and income in my app.
-  # The expense is an expense if it is negative.
 
-  # validates :amount, numericality: { greater_than: 0 }
-
-  # I have not included the date validation because,
-  # if a user wants to plan for the future month's exenses and see what they will have available in budget.
-  # Then they can.
-  # validate :date_cannot_be_in_the_future
-
-  # def date_cannot_be_in_the_future
-  #   if date.present? && date > Date.today
-  #     errors.add(:date, "can't be in the future")
-  #   end
-  # end
 end
