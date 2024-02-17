@@ -4,7 +4,6 @@ class Expense < ApplicationRecord
   validates :name, length: { maximum: 50 }
   validates :amount, numericality: true
   validates :group_id, presence: true
-  validates :amount, presence: true, numericality: { greater_than_or_equal_to: -10000000, less_than_or_equal_to: 10000000 }
-
-
+  validates :amount, presence: true,
+                     numericality: { greater_than_or_equal_to: -10_000_000, less_than_or_equal_to: 10_000_000 }
 end

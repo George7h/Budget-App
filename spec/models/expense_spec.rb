@@ -22,9 +22,9 @@ RSpec.describe Expense, type: :model do
       user.confirm
       user.save
       group = user.groups.create(name: 'Test Group',
-                                  icon: File.open(Rails.root.join('app', 'assets',
-                                                                  'images', 'defaultgroupicon.png')))
-      expense = group.expenses.new(name: 'Example Expense', amount: 10000001, date: Date.today)
+                                 icon: File.open(Rails.root.join('app', 'assets',
+                                                                 'images', 'defaultgroupicon.png')))
+      expense = group.expenses.new(name: 'Example Expense', amount: 10_000_001, date: Date.today)
       expect(expense).not_to be_valid
     end
     it 'is not valid if amount is less than -10,000,000' do
@@ -32,11 +32,10 @@ RSpec.describe Expense, type: :model do
       user.confirm
       user.save
       group = user.groups.create(name: 'Test Group',
-                                  icon: File.open(Rails.root.join('app', 'assets',
-                                                                  'images', 'defaultgroupicon.png')))
-      expense = group.expenses.new(name: 'Example Expense', amount: -10000001, date: Date.today)
+                                 icon: File.open(Rails.root.join('app', 'assets',
+                                                                 'images', 'defaultgroupicon.png')))
+      expense = group.expenses.new(name: 'Example Expense', amount: -10_000_001, date: Date.today)
       expect(expense).not_to be_valid
     end
-
   end
 end
