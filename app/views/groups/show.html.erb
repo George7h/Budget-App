@@ -1,0 +1,35 @@
+<%= render partial: 'shared/navbar/navbar2' %>
+<div id="groupdetailspage">
+  <div class="category-container">
+<div class="group-details-card">
+  <div class="group-details-iconname">
+<% if @group.icon.attached? %>
+  <%= image_tag url_for(@group.icon), class: "group-icon" %>
+<% else %>
+  <p>No icon available</p>
+<% end %>
+
+<h5><%= @group.name %> </h5>
+</div>
+
+
+<% @expenses.each do |expense| %>
+<hr>
+  <div>
+    <p><strong>Name:</strong> <%= expense.name %></p>
+   <%= expense.date %></p>
+    <p><strong>Amount:</strong> <%= number_with_precision(expense.amount, precision: 2) %></p>
+    <div class="category-card-buttons">
+    <%= link_to "Edit", edit_group_expense_path(@group, expense), class:"editbtn" %>
+     <%= button_to "Delete", group_expense_path(@group, expense), class:"deletebtn", method: :delete, data: { confirm: "Are you sure?" } %>
+     </div>
+  </div>
+ 
+<% end %>
+<hr>
+<p><strong>TOTAL PAYMENT</strong>  <strong>$<%= number_with_precision(@group.expenses.sum(:amount), precision: 2) %></strong></p>
+</div>
+<button id="add-category">
+<%= link_to "Add a new transaction", new_group_expense_path(@group), id:"add" %>
+</button>
+</div>

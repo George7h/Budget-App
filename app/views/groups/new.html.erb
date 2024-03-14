@@ -1,0 +1,23 @@
+
+
+
+<%= form_with(model: @group, url: groups_path, method: :post) do |form| %>
+<nav class="navbar navbar-expand-lg navcolor">
+  <%= link_to groups_path do %>
+    <%= image_tag "arrow_back.svg", class: "arrow-back" %>
+  <% end %>
+  <h2 id="headingcat">Add a new category</h2>
+  <div class="actions">
+    <%= form.submit "Save", class: 'registration-submission' %>
+  </div>
+</nav>
+  <div>
+    <%= form.text_field :name, placeholder:"Name" %>
+  </div>
+
+  <div>
+    <%= form.file_field :icon %>
+  </div>
+
+ 
+<% end %>

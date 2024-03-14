@@ -1,0 +1,25 @@
+<%= render partial: 'shared/navbar/loginnav' %>
+<div class="login-container">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email" %>
+  </div>
+
+  <div class="field">
+    
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password" %>
+  </div>
+
+<% end %>
+
+ 
+    <div id="notice-container" class="notice-container">
+  <p class="notice"><%= notice %></p>
+</div>
+  <div id="alert-container" class="alert-container">
+    <p class="alert"><%= alert %></p>
+    </div>
+
+<%= link_to "Forgot your password?", new_password_path(resource_name), class:"forgetlogin" %><br />
+</div>
