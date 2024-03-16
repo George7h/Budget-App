@@ -4,7 +4,7 @@
   <img src="./app/assets/images/BUDGETTO.svg" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>The Budgetting App</b></h3>
+  <h3><b>Bugetto - The budgeting App</b></h3>
 
 </div>
 
